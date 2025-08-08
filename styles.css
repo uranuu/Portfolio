@@ -199,47 +199,65 @@ h2 {
 }
 
 .project-card {
-    background: #fff;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: rgba(0, 123, 255, 0.2);
 }
 
 .project-card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
 }
 
 .project-card h3 {
-    padding: 1rem;
+    padding: 1.5rem 1.5rem 0.5rem;
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2c3e50;
 }
 
 .project-card p {
-    padding: 0 1rem;
-    color: #666;
+    padding: 0 1.5rem;
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 .project-link {
     display: inline-block;
-    margin: 1rem;
-    padding: 0.5rem 1rem;
-    background: #007bff;
+    margin: 0 1.5rem 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
     color: white;
     text-decoration: none;
-    border-radius: 4px;
-    transition: background 0.3s ease;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .project-link:hover {
-    background: #0056b3;
+    background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
 }
 
 /* Contact Section */
@@ -408,4 +426,89 @@ footer {
 .contact-button:hover::after {
     width: 300px;
     height: 300px;
+}
+
+.project-card.fanta {
+    background: linear-gradient(135deg, #ff9100 0%, #ffb347 100%);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(255, 145, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.project-card.fanta .fanta-bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.18;
+    background: #fff;
+    animation: floatCircle 6s infinite alternate ease-in-out;
+    z-index: 1;
+}
+
+.project-card.fanta .fanta-bg-circle.c1 {
+    width: 120px; height: 120px; left: 10%; top: 20%; animation-delay: 0s;
+}
+.project-card.fanta .fanta-bg-circle.c2 {
+    width: 80px; height: 80px; right: 15%; top: 50%; animation-delay: 2s;
+}
+.project-card.fanta .fanta-bg-circle.c3 {
+    width: 60px; height: 60px; left: 40%; bottom: 10%; animation-delay: 1s;
+}
+
+@keyframes floatCircle {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+.project-card.fanta .fanta-bottle {
+    width: 140px;
+    z-index: 2;
+    animation: floatBottle 3s infinite ease-in-out alternate;
+    margin: 0 2rem;
+}
+
+@keyframes floatBottle {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-18px); }
+}
+
+.project-card.fanta .fanta-content {
+    z-index: 2;
+    flex: 1;
+    padding: 2.5rem 2rem;
+}
+
+.project-card.fanta h3, .project-card.fanta p, .project-card.fanta .project-link {
+    color: #fff;
+}
+
+.project-card.fanta h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.project-card.fanta p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-card.fanta .project-link {
+    background: #fff;
+    color: #ff9100;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(255, 145, 0, 0.12);
+    transition: background 0.3s, color 0.3s;
+}
+
+.project-card.fanta .project-link:hover {
+    background: #ffe0b2;
+    color: #ff9100;
 } 
