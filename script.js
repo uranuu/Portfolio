@@ -13,16 +13,16 @@ class ParticleSystem {
     }
 
     createParticles() {
-        const particleCount = 50;
+        const particleCount = 30;
         for (let i = 0; i < particleCount; i++) {
             this.particles.push({
                 x: Math.random() * window.innerWidth,
                 y: Math.random() * window.innerHeight,
-                vx: (Math.random() - 0.5) * 2,
-                vy: (Math.random() - 0.5) * 2,
-                size: Math.random() * 3 + 1,
+                vx: (Math.random() - 0.5) * 1.5,
+                vy: (Math.random() - 0.5) * 1.5,
+                size: Math.random() * 2 + 0.5,
                 color: `hsl(${Math.random() * 60 + 300}, 70%, 60%)`,
-                opacity: Math.random() * 0.5 + 0.2
+                opacity: Math.random() * 0.3 + 0.1
             });
         }
     }
@@ -51,7 +51,7 @@ class ParticleSystem {
         canvas.style.width = '100%';
         canvas.style.height = '100%';
         canvas.style.pointerEvents = 'none';
-        canvas.style.zIndex = '1';
+        canvas.style.zIndex = '-1';
         document.body.appendChild(canvas);
 
         const resizeCanvas = () => {
@@ -198,11 +198,14 @@ class TypewriterEffect {
 // Efeito de parallax avançado
 class ParallaxEffect {
     constructor() {
-        this.sections = document.querySelectorAll('section');
-        this.init();
+        // Temporariamente desabilitado para evitar problemas visuais
+        // this.sections = document.querySelectorAll('section');
+        // this.init();
     }
 
     init() {
+        // Comentado temporariamente
+        /*
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             
@@ -212,6 +215,7 @@ class ParallaxEffect {
                 section.style.transform = `translateY(${yPos}px)`;
             });
         });
+        */
     }
 }
 
@@ -376,10 +380,13 @@ class SmoothScroll {
 // Efeito de cursor personalizado
 class CustomCursor {
     constructor() {
-        this.init();
+        // Temporariamente desabilitado para evitar problemas
+        // this.init();
     }
 
     init() {
+        // Comentado temporariamente
+        /*
         const cursor = document.createElement('div');
         cursor.className = 'custom-cursor';
         cursor.style.cssText = `
@@ -426,6 +433,7 @@ class CustomCursor {
                 cursorDot.style.transform = cursorDot.style.transform.replace(' scale(0.5)', '');
             });
         });
+        */
     }
 }
 
