@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
+    <title>Kauê Henrique - Portfólio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+        </div>
+    </div>
+
     <header>
         <nav>
-            <div class="logo">PORTFÓLIO</div>
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                PORTFÓLIO
+            </div>
             <ul class="nav-links">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#sobre">SOBRE</a></li>
-                <li><a href="#habilidades">HABILIDADES</a></li>
-                <li><a href="#projetos">PROJETOS</a></li>
-                <li><a href="#contato">CONTATO</a></li>
+                <li><a href="#home"><i class="fas fa-home"></i> HOME</a></li>
+                <li><a href="#sobre"><i class="fas fa-user"></i> SOBRE</a></li>
+                <li><a href="#habilidades"><i class="fas fa-tools"></i> HABILIDADES</a></li>
+                <li><a href="#projetos"><i class="fas fa-project-diagram"></i> PROJETOS</a></li>
+                <li><a href="#contato"><i class="fas fa-envelope"></i> CONTATO</a></li>
             </ul>
         </nav>
     </header>
@@ -26,43 +39,123 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-rocket"></i>
+                    <span>Desenvolvedor Full Stack</span>
+                </div>
                 <h1>KAUÊ HENRIQUE</h1>
-                <p class="subtitle">Desenvolvedor Junior</p>
+                <p class="subtitle">Desenvolvedor Full Stack & Designer</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Anos de Experiência</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">Projetos Concluídos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Satisfação</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projetos" class="cta-primary">
+                        <i class="fas fa-eye"></i>
+                        Ver Projetos
+                    </a>
+                    <a href="#contato" class="cta-secondary">
+                        <i class="fas fa-paper-plane"></i>
+                        Fale Comigo
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+                <span>Scroll para explorar</span>
             </div>
         </section>
 
-        <section id="sobre" class="about">
+        <section id="sobre">
             <div class="container">
                 <h2>SOBRE MIM</h2>
-                <p>Desenvolvedor Júnior com experiência em HTML, CSS, JavaScript, Java, Python. Focado no desenvolvimento frontend, com forte interesse em backend, atualmente aprimorando habilidades em Java para atuação em soluções robustas e escaláveis.</p>
-            </div>
-        </section>
-
-        <section id="habilidades" class="skills">
-            <div class="container">
-                <h2>HABILIDADES</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h3>Design Digital</h3>
-                        <p>UI/UX, Web Design, Design Responsivo</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>Desenvolvimento</h3>
-                        <p>HTML, CSS, JavaScript, React</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>Design Gráfico</h3>
-                        <p>Branding, Identidade Visual, Tipografia</p>
+                <p class="section-subtitle">Conheça um pouco mais sobre minha jornada e experiência</p>
+                <div class="about">
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>Desenvolvedor Júnior apaixonado por tecnologia e design, com experiência em HTML, CSS, JavaScript, Java e Python. Focado no desenvolvimento frontend com forte interesse em backend, atualmente aprimorando habilidades em Java para atuação em soluções robustas e escaláveis. Sempre em busca de novos desafios e aprendizado contínuo.</p>
+                        </div>
+                        <div class="about-features">
+                            <div class="feature">
+                                <i class="fas fa-lightbulb"></i>
+                                <h4>Criativo</h4>
+                                <p>Soluções inovadoras para problemas complexos</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-users"></i>
+                                <h4>Colaborativo</h4>
+                                <p>Trabalho em equipe e comunicação eficiente</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <h4>Pontual</h4>
+                                <p>Entregas dentro do prazo estabelecido</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projetos" class="projects">
+        <section id="habilidades">
+            <div class="container">
+                <h2>HABILIDADES</h2>
+                <p class="section-subtitle">Tecnologias e ferramentas que domino</p>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3>Frontend</h3>
+                        <p>HTML5, CSS3, JavaScript, React, Bootstrap, Responsive Design</p>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend</h3>
+                        <p>Java, Python, C#, Node.js, APIs RESTful, Banco de Dados</p>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Design</h3>
+                        <p>Design Gráfico, Branding, Identidade Visual, Tipografia, UI/UX</p>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos">
             <div class="container">
                 <h2>PROJETOS</h2>
+                <p class="section-subtitle">Alguns dos meus trabalhos mais recentes</p>
                 <div class="projects-grid">
                     <div class="project-card fanta">
+                        <div class="project-badge">
+                            <i class="fas fa-star"></i>
+                            Destaque
+                        </div>
                         <span class="fanta-bg-circle c1"></span>
                         <span class="fanta-bg-circle c2"></span>
                         <span class="fanta-bg-circle c3"></span>
@@ -82,28 +175,102 @@
                         </svg>
                         <div class="fanta-content">
                             <h3>FANTA<br><span style='font-size:1.2rem;font-weight:400;'>Sabor Laranja</span></h3>
-                            <p>Com seu sabor refrescante e vibrante, essa soda é uma verdadeira explosão de frutas que conquista paladares de todas as idades.</p>
-                            <a href="https://uranuu.github.io/New-site-da-fanta/" target="_blank" class="project-link">Ver Projeto</a>
+                            <p>Site moderno e responsivo desenvolvido para a marca Fanta, com design atrativo e animações suaves que destacam o produto.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <a href="https://uranuu.github.io/New-site-da-fanta/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver Projeto
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contato" class="contact">
+        <section id="contato">
             <div class="container">
                 <h2>CONTATO</h2>
-                <p>Vamos trabalhar juntos? Entre em contato!</p>
-                <a href="https://wa.me/5541995052661" target="_blank" class="contact-button">Enviar Mensagem</a>
+                <p class="section-subtitle">Vamos criar algo incrível juntos?</p>
+                <div class="contact">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>kauehenrique@email.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+55 (41) 99505-2661</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <p>linkedin.com/in/kauehenrique</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Estou sempre aberto a novas oportunidades e projetos interessantes. Entre em contato para conversarmos sobre como posso ajudar no seu projeto!</p>
+                    <a href="https://wa.me/5541995052661" target="_blank" class="contact-button">
+                        <i class="fab fa-whatsapp"></i>
+                        Enviar Mensagem
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Kauê Henrique de Bastos. Todos os direitos reservados.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Kauê Henrique</h3>
+                    <p>Desenvolvedor Full Stack apaixonado por criar experiências digitais incríveis.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#habilidades">Habilidades</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> kauehenrique@email.com</li>
+                        <li><i class="fab fa-whatsapp"></i> +55 (41) 99505-2661</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Curitiba, PR</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kauê Henrique de Bastos. Todos os direitos reservados.</p>
+                <p>Feito com <i class="fas fa-heart"></i> e muito café</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Botão de voltar ao topo -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
